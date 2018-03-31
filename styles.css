@@ -1,7 +1,8 @@
 
     html {
-      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-      background-size:cover;
+      background:#fff url(harry-sandhu-209807-unsplash.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
       font-family:'helvetica neue';
       text-align: center;
       font-size: 10px;
@@ -14,6 +15,11 @@
       flex:1;
       min-height: 100vh;
       align-items: center;
+    }
+
+    img {
+      width: auto;
+      height: auto;
     }
 
     .clock {
@@ -40,10 +46,27 @@
 
     .hand {
       width:50%;
-      height:6px;
-      background:black;
+      background: #fff;
       position: absolute;
       top:50%;
+
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
+    .min-hand {
+      background-color: springgreen !important;
+      height: 10px;
+    }
 
+    .hour-hand {
+      background-color: salmon !important;
+      height: 6px;
+    }
+
+    .second-hand {
+      background-color: rebeccapurple !important;
+      height: 15px;
+    }
